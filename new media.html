@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>web-project-fair</title> 
+    <link rel="stylesheet" href="new.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+    <!-- Bootstrap link--> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+    <!-- Font Awesome CDN --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> 
+</head> 
+
+<body> 
+    <nav class="navbar navbar-expand-lg" id="navbar"> 
+        <div class="container"> 
+            <a class="navbar-brand" href="karakat.html" id="logo"> <span>T</span>ravel</a> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"> 
+                <span><i class="fa-solid fa-bars"></i></span> 
+            </button> 
+            <div class="collapse navbar-collapse" id="mynavbar"> 
+                <ul class="navbar-nav me-auto"> 
+                    <li class="nav-item"><a class="nav-link active" href="karakat.html">Home</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#book">Book</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li> 
+                </ul> 
+                <form class="d-flex"> 
+                    <input class="form-control me-2" type="text" placeholder="Search"> 
+                    <button class="btn btn-primary" type="button">Search</button> 
+                </form> 
+            </div> 
+        </div> 
+    </nav> 
+
+    <div class="home"> 
+        <video class="bg-video" autoplay muted loop> 
+            <source src="./430260_Mists River Mountains Snow_By_Vadim_Sherbakov_Artlist_HD.mp4" type="video/mp4"> 
+        </video> 
+        <div class="content"> 
+            <h5>Welcome to World</h5> 
+            <h1 id="visit-text">Visit United States</h1> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ipsum facilis labore id nulla quas quaerat quos harum reiciendis.</p> 
+            <a href="#book" class="btn">Book place</a> 
+        </div> 
+    </div> 
+   
+    <div class="container">
+        <div class="image-section">
+            <img src="world-travel.png" alt="Travel Image">
+        </div>
+        <div class="form-section">
+            <h1><span class="highlight">B</span>ook</h1>
+            <form>
+                <input type="text" placeholder="Where To" required>
+                <input type="number" placeholder="How Many" required>
+                <input type="date" placeholder="Start Date" required>
+                <input type="date" placeholder="End Date" required>
+                <textarea placeholder="Enter Your Name & Details" required></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+
+    <!-- JavaScript for Changing Text --> 
+    <script>
+        const locations = ["United States", "Arabia", "Dubai", "France", "Tokyo", "Canada"];
+        let index = 0;
+
+        function changeText() {
+            document.getElementById("visit-text").textContent  = "Visit " + locations[index];
+            index = (index + 1) % locations.length;
+        }
+
+        setInterval(changeText, 2000); // Text changes every 1 seconds
+    </script>
+</body> 
+</html>
